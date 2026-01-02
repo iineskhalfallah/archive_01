@@ -10,26 +10,18 @@ h1 {
     unicode-bidi: isolate;
 }
 body {
-
+  text-align: center;
   margin: 0;
   height: 100vh;
   background: #000000ff;
   color: #ffffffff;
-  font-family: help me, Arial, Helvetica, sans-serif;
+  font-family: DystopianSystem, Arial, Helvetica, sans-serif;
   letter-spacing: 0.8em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* BOOT SCREEN */
-.boot-screen {
-  text-align: center;
-  border: 1px solid #cfd8dc;
-  padding: 3rem 4rem;
-  background: rgba(7, 7, 7, 0.9);
-  box-shadow: 0 0 40px rgba(77, 1, 1, 0.15);
-}
 
 /* LOGO */
 .logo {
@@ -71,11 +63,18 @@ body {
 /* ENTER BUTTON */
 .enter {
   text-decoration: wavy;
+  font-size: 40px;
   border: none;
   padding: 0.6rem 2rem;
   color: #ad0000;
   letter-spacing: 0.9em;
   transition: all 0.3s ease;
+}
+
+@font-face {
+  font-family:  DystopianSystem;
+  src: url("../assets/fonts/DystopianSystem.otf")
+    format("opentype");
 }
 
 .enter:hover {
