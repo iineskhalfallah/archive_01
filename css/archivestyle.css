@@ -1,12 +1,13 @@
-.top {
+.boot-screen{
     width: 100%;
     height: 42px;
     position: fixed;
     z-index: 1;
     right: 0px;
     top: 0px;
-    background-image: url('../assets/images/black_lace.png') repeat left top;
+    background-image: url('../assets/images/black_lace.png') repeat left top !important;
 }
+
 body{
     background-image: url('../assets/image/bg.jpg');
     background: rgb(255, 255, 255);
