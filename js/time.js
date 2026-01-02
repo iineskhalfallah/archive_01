@@ -1,12 +1,22 @@
- function getFormattedTime() {
-          const now = new Date();
-          const hours = now.getHours().toString().padStart(2, '0');
-          const minutes = now.getMinutes().toString().padStart(2, '0');
-          const seconds = now.getSeconds().toString().padStart(2, '0');
-          return `${hours}:${minutes}:${seconds}`;
-      }
 
-    console.log(getFormattedTime()); // Example output: "00:15:00"
-      // const date = new Date();
-      // const displayElement=document.getElementById("time");
-      // displayElement.innerHTML(date);
+     
+      function updateSystemTime() {
+          const now = new Date();
+
+            const hours = String(now.getHours()).padStart(2, '0');
+              const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+
+                  const timeString = `${hours}:${minutes}:${seconds}`;
+
+                    document.getElementById('system-time').textContent = timeString;
+                    }
+
+                    // update immediately
+                    updateSystemTime();
+
+                    // update every second
+                    setInterval(updateSystemTime, 1000);
+
+    	
+ 

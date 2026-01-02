@@ -25,7 +25,6 @@ body {
 
 /* LOGO */
 .logo {
-  font-family: 'Orbitron', chiller;
   letter-spacing: 0.8em;
   font-size: 2.5rem;
   margin: 1rem 0;
@@ -78,6 +77,5 @@ body {
 }
 
 .enter:hover {
-
-
+  color: white;
 }

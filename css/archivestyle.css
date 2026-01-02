@@ -1,26 +1,18 @@
-.top {
-    /*width: 100%;
-    /*height: 42px;
+.boot-screen{
+    width: 100%;
+    height: 42px;
     position: fixed;
     z-index: 1;
-    /*right: 0px;
-    /*top: 0px;*/
-    background-image: url('../assets/images/black_lace.png') repeat left top;
+    right: 0px;
+    top: 0px;
+    background-image: url('../assets/images/black_lace.png') repeat left top !important;
 }
 
-/* BOOT SCREEN */
-.boot-screen {
-  text-align: center;
-  border: 1px solid #cfd8dc;
-  padding: 3rem 4rem;
-  background: rgba(7, 7, 7, 0.9);
-  box-shadow: 0 0 40px rgba(77, 1, 1, 0.15);
-}
 
 body{
     background-image: url('../assets/image/bg.jpg');
-    /*background: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;*/
+    background: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 @font-face {
