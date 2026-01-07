@@ -62,10 +62,11 @@ body {
 /* ENTER BUTTON */
 .enter {
   text-decoration: wavy;
+  -webkit-text-stroke: 2px #ad0000;
   font-size: 40px;
   border: none;
   padding: 0.6rem 2rem;
-  color: #ad0000;
+  color: transparent;
   letter-spacing: 0.9em;
   transition: all 0.3s ease;
 }
