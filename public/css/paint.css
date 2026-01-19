@@ -1,0 +1,28 @@
+.paint-window {
+  width: 420px;
+  background: #c0c0c0;
+  border: 2px solid black;
+  font-family: monospace;
+}
+
+.title-bar {
+  background-image: url("../assets/images/accessories/black_lace2.png");
+  color: white;
+  padding: 4px;
+  font-size: 12px;
+}
+
+.paint-controls {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  background: #999;
+}
+
+#paintCanvas {
+  display: block;
+  width: 100%;
+  background: white;
+  border-top: 2px solid black;
+  cursor: crosshair;
+}

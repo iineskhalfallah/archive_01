@@ -1,0 +1,66 @@
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, 
+  #ccc 25%,
+  black 25%, 
+  black 50%, 
+  #ccc 50%,
+   #ccc 70%, 
+   black 75% ,
+    black); 
+    background-size: 12px 12px;
+  border-radius: 5px; 
+  border: 4px solid #000000;
+}
+::-webkit-scrollbar {
+    width: 17px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, 
+    black 25%,
+    #ccc 25%, 
+    #ccc 50%, 
+    black 50%,
+    black 70%, 
+    #ccc 75%,
+    #ccc
+  );
+  background-size: 12px 12px;
+}
+
+
+.moth {
+  position: fixed;
+  z-index: 9999;
+  width: 70px;
+  animation: fly 10s linear infinite;
+}
+
+@keyframes fly {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(200px, 50px) rotate(20deg); }
+  50% { transform: translate(400px, 100px) rotate(-20deg); }
+  75% { transform: translate(200px, 200px) rotate(10deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+
+.bottom-accessory{
+  position: absolute;
+  bottom:0;
+  right:0;
+}
+
+.girl {
+  position: absolute; /* or fixed if you want it always on screen */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: float 3s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0%   { transform: translate(-50%, -50%) translateY(0px); }
+  50%  { transform: translate(-50%, -50%) translateY(-20px); }
+  100% { transform: translate(-50%, -50%) translateY(0px); }
+}

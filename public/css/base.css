@@ -1,0 +1,21 @@
+/* base.css */
+@import url("layout.css");
+@import url("components.css");
+@import url("paint.css");
+@import url("signal-corruption.css");
+
+
+@font-face {
+  font-family:  ruritania;
+  src: url("../assets/fonts/ruritania.ttf")
+  format("truetype");
+}
+@font-face {
+  font-family:  BrothericInkBleed;
+  src: url("../assets/fonts/BrothericInkBleed.otf")
+  format("opentype");
+}
+
+html{
+    cursor: url('../assets/images/accessories/cursorimg.png'), auto !important;
+}
