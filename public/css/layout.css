@@ -1,4 +1,8 @@
 
+html , body{
+  overflow-x:hidden;
+  overscroll-behavior:none;
+}
 body{
     /*display:flex;*/
     margin: auto;
@@ -18,7 +22,13 @@ header{
   image-rendering: pixelated;
   background-repeat: repeat;
 }
-
+h1{
+  font-family: BrothericInkBleed;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-style: 50px bold;
+}
 
 .main {
     border: 4px double rgb(0, 0, 0);
@@ -29,7 +39,7 @@ header{
     background-image: url('../assets/images/backgrounds/bg.png');
     image-rendering: pixelated;
     background-color: #fff;
-    box-shadow: 4px 4px rgba(255, 255, 255, 0.52);
+    box-shadow: 4px 4px rgba(204, 191, 191, 0.52);
 
 }
 
@@ -85,7 +95,7 @@ header{
   background-image: url('../assets/images/backgrounds/bg.png');
   image-rendering: pixelated;
   background-color: #fff;
-  box-shadow: 4px 4px rgba(53, 52, 56, 0.2);
+  box-shadow: 4px 4px rgba(137, 136, 138, 0.2);
   margin-top: 10px;
   padding: 10px;
 }
@@ -135,14 +145,39 @@ header{
 .stamp-container{
   width: 70%;
   height: auto;
-  padding: 10px;
+  padding: 10px;  
   margin: auto;
-  margin-top: 10px;
+  margin-top:10px;
   background-image: url('../assets/images/backgrounds/bg.png');
+  box-shadow: 4px 4px rgba(255, 255, 255, 0.2);
 
 }
-
 .stamp{
-  width:99px;
+  width:auto;
   height:56px;
+}
+#stamp-layer{
+  display:flex;
+  gap:5px;
+
+  white-space: nowrap;
+}
+#moth-overlay {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;     
+  pointer-events: none;
+  z-index: 9999;
+}
+
+
+footer{
+  margin: auto;
+  width: 70%;
+  margin-top: 10px;
+}
+
+.sparkles{
+  display:flex;
+  justify-content:center;
 }

@@ -15,7 +15,10 @@ a :hover, button :hover {
  position:absolute;
  top:16%;
  left:5%;
+ 
+ width: clamp( 60px, 12vw, 180px);
 
+ mask-image: linear-gradient(to bottom , black 70%, transparent);
 }
 
 .banner {
@@ -70,27 +73,25 @@ a :hover, button :hover {
 .head {
   width: 100%;
   height :fit-content;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   }
 
 .head-img{
   width: 100%;
   height: auto;
-  position: relative;
   image-rendering: pixelated;
 }
 
 .head-title{
   position: absolute;
   text-align:center;
-  font-size: 70%;
-  font-family: BrothericInkBleed white;
+  font-size: 40px;
+  color: white;
+  font-family: BrothericInkBleed;
   font-style: bold;
   -webkit-text-stroke: 2px rgb(0, 0, 0);
-  /* left: 15%;
-  bottom: 15%;
-  right: 15%;
-  top: 15%; */
 
 }
 
@@ -136,10 +137,9 @@ a, a:visited{
 
 
 .stamps {
-    border: 2px dashed;
+    border: 4px dashed white;
     height: 56px;
     width: 100%;
-    margin-top: 10px;
     background-image: url('../assets/images/backgrounds/bg22.jpg');
     image-rendering: pixelated;
 }

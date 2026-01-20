@@ -13,17 +13,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   const layer = document.getElementById("stamp-layer");
 
   try {
-    const res = await fetch("/stamps");
+    const res = await fetch("/api/stamps");
     const stamps = await res.json();
 
     stamps.forEach(name => {
       const img = document.createElement("img");
-      img.src = `/stamps/${name}`;
+      img.src = `/assets/images/stamps/${name}`;
       img.className = "stamp";
       layer.appendChild(img);
     });
 
-  } catch (e) {
-    console.error("stamp load failed", e);
+  } catch (err) {
+    console.error("stamp load failed", err);
   }
 });
+

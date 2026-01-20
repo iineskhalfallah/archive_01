@@ -26,6 +26,7 @@
 
 
 const express = require('express');
+const fs= require("fs")
 const path = require('path');
 
 const app = express();
@@ -47,6 +48,20 @@ app.get('/render', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/pages/render.html'));
 });
 
+app.get('/logs', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/logs.html'));
+});
+
+
+app.get('/shrines', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/shrines.html'));
+});
+
+app.get('/links', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/pages/links.html'));
+});
+
+
 // START SERVER
 app.listen(PORT, () => {
   console.log(`SYSTEM RUNNING at http://localhost:${PORT}`);
@@ -54,26 +69,21 @@ app.listen(PORT, () => {
 
 
 
-// stamp's logic
-// app.get("/stamps", (req, res) => {
-//   const dir = path.join(__dirname, "public/assets/images/stamps");
-//   const files = fs.readdirSync(dir);
-//   res.json(files);
-// });
+// stamps logic
+app.get("/api/stamps", (req, res) => {
+  const dir = path.join(
+    __dirname,
+    "public/assets/images/stamps"
+  );
 
-
-
-// endpoint to list stamp files
-app.get("/stamps", (req, res) => {
-  const stampDir = path.join(__dirname, "public/assets/images/stamps");
-
-  fs.readdir(stampDir, (err, files) => {
+  fs.readdir(dir, (err, files) => {
     if (err) {
-      return res.status(500).json({ error: "Failed to load stamps" });
+      console.error(err);
+      return res.json([]);
     }
 
-    const images = files.filter(file =>
-      /\.(png|gif|jpg|jpeg)$/i.test(file)
+    const images = files.filter(f =>
+      /\.(png|gif|jpg|jpeg)$/i.test(f)
     );
 
     res.json(images);
@@ -81,3 +91,27 @@ app.get("/stamps", (req, res) => {
 });
 
 
+// admin logic
+const fs = require("fs");
+const path = require("path");
+
+const contentPath = path.join(__dirname, "content.json");
+
+// read content
+app.get("/api/content", (req, res) => {
+  fs.readFile(contentPath, "utf8", (err, data) => {
+    if (err) return res.status(500).json({});
+    res.json(JSON.parse(data));
+  });
+});
+
+// update content
+app.post("/api/content", express.json(), (req, res) => {
+  const newContent = req.body;
+
+  fs.writeFile(
+    contentPath,
+    JSON.stringify(newContent, null, 2),
+    () => res.json({ status: "ok" })
+  );
+});

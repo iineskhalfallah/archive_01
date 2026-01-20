@@ -85,9 +85,9 @@
             <ul>
               <li><a href=""><img src=""> About Me</a></li>
               <li><a href=""><img src="">Art</a></li>
-              <li><a href=""><img src="">characters</a></li>
-              <li><a href=""><img src="">Logs</a></li>
-              <li><a href=""><img src="">Links</a></li>
+              <li><a href="/shrines"><img src="">Shrines</a></li>
+              <li><a href="/log"><img src="">Logs</a></li>
+              <li><a href="/links"><img src="">Links</a></li>
               <!-- <li><a href=""><img src="">Guestbook</a></li> -->
             </ul>
           </div>
@@ -133,9 +133,7 @@
               </div>
             </div>
             <script src="" defer=""></script>
-            <audio autoplay="">
-              <source src="../assets/sounds/audio.mp3" type="audio/mpeg">
-            </audio>
+            
           </div>
         </div>
 
@@ -178,38 +176,42 @@
 
     <div class="stamp-container">
       <div class="stamps" >
-          <marquee class="stamp">
+          <marquee direction="right" loop="infinite" >
             <div id="stamp-layer"></div>
-            <!-- <img src="assets/images/stamps/stamp7.jpg" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp0.png"  width="99px" height="56px">
-            <img src="assets/images/stamps/stamp1.gif"  width="99px" height="56px">
-            <img src="assets/images/stamps/stamp6.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp10.jpg" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp11.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp9.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp4.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp3.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp13.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp14.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp12.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp5.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp8.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp2.png" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp16.gif" width="99px" height="56px">
-            <img src="assets/images/stamps/stamp15.png" width="99px" height="56px"> -->
           </marquee>
         </div>
     </div>
 
     <script src="../js/time.js"></script>
     <script src="../js/stamp.js"></script>
+    <script src="../js/moth.js" defer></script>
+    <script src="../js/glitch.js" defer></script>
     <script src="../js/layout.js" defer></script>
     <div class="bottom-accessory">
         <img class="girl" src="assets/images/other/1.png">
-      </div>
-    <img class="moth" src="../assets/images/other/moth3.png">
+    </div>
+    <div id="moth-overlay">
+      <div class="moth-wrapper"><img src="../assets/images/other/moth1.png" class="moth"></div>
+      <div class="moth-wrapper"><img src="../assets/images/other/moth3.png" class="moth"></div>
+      <div class="moth-wrapper"><img src="../assets/images/other/moth3.png" class="moth"></div>
+    </div>
 
-    <!-- <img class="moth" src="../assets/images/other/3.png">
-    <img class="moth" src="../assets/images/other/3.png"> -->
+
+    <audio autoplay="" loop="infinite">
+              <source src="../assets/sounds/audio.mp3" type="audio/mpeg">
+            </audio>
+
+
   </body>
+  <footer>
+    <h1> All rights reserved, 2025 — sworn to eternity, long after the final dusk</h1> 
+    <div class="sparkles">
+      <span class="sparkle"> ~
+          ˚　　✦　.　　. 　 ˚　.　　 .
+      ✦　　 　˚　　 . ★⋆. </span>
+      <span class="sparkle">　.   　　˚　　 　　*　　 　　✦　　.　　.　　</span>
+      <span class="sparkle" >✦　˚ 　 ˚　.˚　　✦　　　.　　.
+        　 ˚　.　　 　　 　　✧✶</span>
+    </div>
+  </footer>
 </html>

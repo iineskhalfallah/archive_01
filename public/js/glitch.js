@@ -5,20 +5,8 @@ setInterval(() => {
 }, 120);
 
 
-
-
-
-
-const moths = document.querySelectorAll('.moth');
-
-moths.forEach(moth => {
-  function move() {
-    const x = Math.random() * window.innerWidth;
-    const y = Math.random() * window.innerHeight;
-    const duration = 3 + Math.random() * 5; // seconds
-    moth.style.transition = `transform ${duration}s linear`;
-    moth.style.transform = `translate(${x}px, ${y}px) rotate(${Math.random()*360}deg)`;
-    setTimeout(move, duration * 1000);
-  }
-  move();
+document.querySelectorAll('.sparkle').forEach(star => {
+  setInterval(() => {
+    star.style.opacity = Math.random() > 0.6 ? 1 : 0;
+  }, 150 + Math.random() * 400);
 });

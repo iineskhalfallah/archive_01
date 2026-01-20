@@ -29,19 +29,27 @@
 }
 
 
-.moth {
+.moth-wrappr {
   position: fixed;
+  top: 0;
+  left: 0;
+  width:0;
+  height:0;
   z-index: 9999;
-  width: 70px;
-  animation: fly 10s linear infinite;
+  pointer-events: none;
+}
+.moth{
+   width: 50px;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.18));
+  animation: flap 0.25s ease-in-out infinite alternate;
+
+
 }
 
-@keyframes fly {
-  0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(200px, 50px) rotate(20deg); }
-  50% { transform: translate(400px, 100px) rotate(-20deg); }
-  75% { transform: translate(200px, 200px) rotate(10deg); }
-  100% { transform: translate(0, 0) rotate(0deg); }
+/* wing flapping illusion */
+@keyframes flap {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0.85); }
 }
 
 
@@ -52,15 +60,64 @@
 }
 
 .girl {
-  position: absolute; /* or fixed if you want it always on screen */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed; 
+  bottom: 0;
+  right: 0;
   animation: float 3s ease-in-out infinite alternate;
+}
+.girl {
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
+  opacity: 0.95;
 }
 
 @keyframes float {
-  0%   { transform: translate(-50%, -50%) translateY(0px); }
-  50%  { transform: translate(-50%, -50%) translateY(-20px); }
-  100% { transform: translate(-50%, -50%) translateY(0px); }
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
+
+.sparkle{
+  color: white;
+}
+
+
+/* .sparkle {
+  display: inline-block;
+  color: white;
+  animation: sparkle 2.5s infinite ease-in-out;
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.2);
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+  }
+  50% {
+    opacity: 1;
+    transform: scale(0.9);
+    filter: drop-shadow(0 0 10px rgba(255,255,255,0.9));
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(0.2);
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+  }
+} */
+/* .sparkle {
+  display: inline-block;
+  opacity: 0;
+  color: white;
+  animation: blink 0.8s infinite steps(1, end);
+  filter: drop-shadow(0 0 4px rgba(255,255,255,0.6));
+}
+
+.delay1 { animation-delay: 0.2s; }
+.delay2 { animation-delay: 0.45s; }
+
+@keyframes sparkle {
+  0%   { opacity: 0; }
+  20%  { opacity: 1; }
+  40%  { opacity: 0; }
+  100% { opacity: 0; }
+} */
