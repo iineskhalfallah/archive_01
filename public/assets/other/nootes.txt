@@ -1,0 +1,39 @@
+Dec 25 2025 ~ I decided it's about time to create my website.
+
+Dec 31 2025 ~ even tho i have a dev background and on top of that it's just html and css and a tiny bit of js I feel so overwhelmed it's been quite some time since I programmed but I'll keep pushing through.
+
+Jan 02 2026 ~ I've been working on it and I started going back on track also I'm seeing some improvment. 
+
+Jan 05 2026 ~ at first I was so determined to go with Horror/cyber-core/y2K sony ads like theme but now I kinda changed my mind so i'll see about it. 
+
+Jan 07 2026 ~ Well I did it (≖⩊≖), I changed the theme into Goth/lolita/cyber (idk if thoses are the correct names) I kept a touch of horror tho, I seriously have tons of idea to add.
+
+Jan 11 2026 ~ major update!!! I'm adding new section and today I decided to orginize it more so I added a backend to read automatically my stamp folder without me adding them manualy each time I might add shuffle option to it too (if ofc I found the correct code lol) .  
+
+Jan 13 2026 ~ Last night an idea sparked to my mind when i saw two pin on pintrest and I'm dying to make them work on my website.
+
+Jan 15 2026 ~ I was able to make one of the idea I talked about work it's the girl on the left side look at how gorgeous(struggeled spelling this lol) she is floating there with that hallow over her I FUCKING DID THAT!!!! (≧∇≦).
+
+Jan 17 2026 ~ The 2nd idea I talked about isn't working so basically I wanted to have some moths flying aroud the screen ..EWW I KNOW YOU MIGHT NOT LIKE IT BUT I ALREADY VISUALIZED SO I CAN'T WALK ON!!!!.   
+
+Jan 19 2026 ~ HEHEHEHE IT WORKED AND GUESS I EVEN MADE IT RUN AWAY WHEN YOU HOOVER OVER IT.
+
+Jan 20 2026 ~ planning to start working on diaries/logs page, so i have a lot of diaries and notes scaterred everywhere I'm planning to store them here I'll keep some public and password protect the more personal one (even tho no one might ever visit this website).
+
+ Jan 21 2026 ~ . 
+
+
+
+ Hello, this is Aiso! </p>
+            <p>Welcome to my website! I FINALLY made it </p>
+            <p> I had the urge to create my own website to share my messy thoughts and my hobbies and
+              things I am into for a very long time, and finally I decided
+              to commit on the last week of 2025.</p>
+              <p></p> when I started collecting material I couldn't
+              believe how much I was missing online, the internet is trully filled with cool ppl so here
+              I am trying to build it slowly .</p>
+            <p>So I hope you'll enjoy the website, I know it's a mess lol and I can't even decide on a
+              defenitif core so you'll see a mess of diffrent cores until I make my mind about the main core
+              but I am really into a ton of things and I stuggle with orginising my thoughts so mess is
+              univetable and i hope to fill it up with even more cool things like y'all. </p>
+            <p>Thank you so much for visiting!</p>

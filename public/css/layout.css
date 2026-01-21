@@ -28,6 +28,7 @@ h1{
   justify-content: center;
   color: white;
   font-style: 50px bold;
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
 }
 
 .main {
@@ -39,7 +40,8 @@ h1{
     background-image: url('../assets/images/backgrounds/bg.png');
     image-rendering: pixelated;
     background-color: #fff;
-    box-shadow: 4px 4px rgba(204, 191, 191, 0.52);
+    /* box-shadow: 4px 4px rgba(204, 191, 191, 0.52); */
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
 
 }
 
@@ -131,6 +133,7 @@ h1{
   image-rendering: pixelated;
   background-color: #fff;
   box-shadow: 4px 4px rgba(255, 255, 255, 0.2);
+  text-align: center;
 }
 .mood{
   border: 4px dashed Black;
@@ -150,17 +153,19 @@ h1{
   margin-top:10px;
   background-image: url('../assets/images/backgrounds/bg.png');
   box-shadow: 4px 4px rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
 
 }
 .stamp{
   width:auto;
   height:56px;
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.15));
 }
 #stamp-layer{
   display:flex;
   gap:5px;
-
   white-space: nowrap;
+  filter: drop-shadow(0 0 15px rgba(255,255,255,0.5));
 }
 #moth-overlay {
   position: fixed;

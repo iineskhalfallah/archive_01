@@ -1,36 +1,21 @@
-// const express = require("express");
-// const path = require("path");
-
-// const app = express();
-// const PORT = 3000;
-
-
-// // serve static files from /public
-// app.use(express.static(path.join(__dirname, "public")));
-
-
-// app.get("/", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public/pages/index.html"));
-// });
-
-// app.get("/archive", (req, res) => {
-//   res.sendFile(path.join(__dirname, "public/pages/archive.html"));
-// });
-
-// app.listen(PORT, () => {
-//   console.log(`SYSTEM RUNNING at http://localhost:${PORT}`);
-// });
-
-
-
-
-
 const express = require('express');
 const fs= require("fs")
 const path = require('path');
 
 const app = express();
 const PORT = 3000;
+
+// middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+
+// database init
+require("./db/db");
+
+// routes
+app.use("/admin", require("./routes/admin"));
+app.use("/content", require("./routes/content"));
 
 // Serve static files (CSS, JS, images)
 app.use(express.static(path.join(__dirname, 'public')));
@@ -92,26 +77,24 @@ app.get("/api/stamps", (req, res) => {
 
 
 // admin logic
-const fs = require("fs");
-const path = require("path");
 
-const contentPath = path.join(__dirname, "content.json");
+// const contentPath = path.join(__dirname, "content.json");
 
-// read content
-app.get("/api/content", (req, res) => {
-  fs.readFile(contentPath, "utf8", (err, data) => {
-    if (err) return res.status(500).json({});
-    res.json(JSON.parse(data));
-  });
-});
+// // read content
+// app.get("/api/content", (req, res) => {
+//   fs.readFile(contentPath, "utf8", (err, data) => {
+//     if (err) return res.status(500).json({});
+//     res.json(JSON.parse(data));
+//   });
+// });
 
-// update content
-app.post("/api/content", express.json(), (req, res) => {
-  const newContent = req.body;
+// // update content
+// app.post("/api/content", express.json(), (req, res) => {
+//   const newContent = req.body;
 
-  fs.writeFile(
-    contentPath,
-    JSON.stringify(newContent, null, 2),
-    () => res.json({ status: "ok" })
-  );
-});
+//   fs.writeFile(
+//     contentPath,
+//     JSON.stringify(newContent, null, 2),
+//     () => res.json({ status: "ok" })
+//   );
+// });

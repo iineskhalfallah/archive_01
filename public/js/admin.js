@@ -1,20 +1,20 @@
-const editor = document.getElementById("editor");
-const saveBtn = document.getElementById("save");
+const page = "archive";
 
-// load existing text
-fetch("/api/content")
-  .then(res => res.json())
-  .then(data => {
-    editor.value = data.frameText || "";
-  });
+function load() {
+  fetch(`/api/content/${page}`)
+    .then(res => res.json())
+    .then(data => {
+      const list = document.getElementById("list");
+      list.innerHTML = "";
+      data.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+          ${item.body}
+          <button onclick="del(${item.id})">X</button>
+        `;
+        list.appendChild(li);
+      });
+    });
+}
 
-// save new text
-saveBtn.onclick = () => {
-  fetch("/api/content", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      frameText: editor.value
-    })
-  });
-};
+load();

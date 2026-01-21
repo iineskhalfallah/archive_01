@@ -17,5 +17,11 @@
 }
 
 html{
-    cursor: url('../assets/images/accessories/cursorimg.png'), auto !important;
+    cursor: url('../assets/images/accessories/cursor.png') 32 32, auto !important;
+    
+}
+
+::selection {
+  background-color: #000000;
+  color: #ffffff;            
 }
